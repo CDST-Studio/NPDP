@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Blog</h1>
+
+    
+<form action="{% url 'upload_create' %}" method="Order" enctype="multipart/form-data">
+    주문자 <br>
+    <input type="text" name="oder_name"><br>
+    내용ㅁ <br>
+    <input type="file" name="image"><br>
+    <input type="submit" value="Submit"/>
+</form>
+
+
+{% for i in orders %}
+    <hr/>
+    <h2>{{ i.user_name }}</h2>
+    <h3>{{ i.order_at }}</h3>
+    <p>{{ i.content }}</p>
+{% endfor %}
+</body>
+</html>

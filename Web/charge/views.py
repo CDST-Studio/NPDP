@@ -1,3 +1,14 @@
 from django.shortcuts import render
+from django.http.response import HttpResponse
+from .models import Order
 
-# Create your views here.
+def index(request):
+    orders = Order.objects.all()
+
+    return render(
+        request,
+        'charge/index.html',
+        {
+            'orders' : orders
+        }
+    )
