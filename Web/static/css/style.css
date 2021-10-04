@@ -1,0 +1,12 @@
+@font-face{
+	font-family:'malgun';
+	src:url('/static/malgun.ttf') format('ttf');
+	}
+	
+	body{
+		font-family:'malgun'
+	}
+
+.nav-link{
+	color: #838383
+}
