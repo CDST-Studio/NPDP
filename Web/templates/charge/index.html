@@ -3,7 +3,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Hawk-Eye</title>
+    <title>NPDP</title>
 
     <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
     <link rel="shortcut icon" href="/static/img/favicon.png" type =  "image/x-icon"/>
@@ -17,17 +17,18 @@
 <body>
     <nav>
         <div class="navbar-nav" style="background-color:#4B4B4B">
-          <a class="navbar-bar">Hoak Eye</a>
+          <a class="navbar-brand" href="#">NPDP</a>
+          <a class="navbar-bar">NPDP</a>
           <a class="nav-link" href="#">로그인</a>
           <a class="navbar-bar">ㅣ</a>
           <a class="nav-link" href="#">회원결제</a>
           <a class="navbar-bar">ㅣ</a>
-          <a class="nav-link" href="#">마이페이지</a>
+          <a class="float-right nav-link" href="#">마이페이지</a>
         </div>
     </nav>
-    <h1>Blog</h1>
 
-    
+    <h1>화이팅</h1>
+    <div padding:100px>화이팅</div>
 <form action="{% url 'upload_File' %}" method="POST" enctype="multipart/form-data">
     주문자 <br>
     <input type="text" name="user_name"><br>
