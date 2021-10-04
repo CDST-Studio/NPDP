@@ -1,10 +1,30 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Blog</title>
+    <title>Hawk-Eye</title>
+
+    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    <link rel="shortcut icon" href="/static/img/favicon.png" type =  "image/x-icon"/>
+    <link rel="icon" href="/static/img/favicon.png"/>
+    <style>
+        body{
+            background-color:bisque;
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <div class="navbar-nav" style="background-color:#4B4B4B">
+          <a class="navbar-bar">Hoak Eye</a>
+          <a class="nav-link" href="#">로그인</a>
+          <a class="navbar-bar">ㅣ</a>
+          <a class="nav-link" href="#">회원결제</a>
+          <a class="navbar-bar">ㅣ</a>
+          <a class="nav-link" href="#">마이페이지</a>
+        </div>
+    </nav>
     <h1>Blog</h1>
 
     
