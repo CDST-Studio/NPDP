@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Order
+from .models import Post
 
-admin.site.register(Order) #어드민 사이트에 Ooders 추가
+admin.site.register(Post)

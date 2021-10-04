@@ -1,19 +1,26 @@
 from django.shortcuts import render
-from .models import Order
+from django.shortcuts import redirect
+from .models import Post
 
 def index(request):
-    orders = Order.objects.all()
+    posts = Post.objects.all()
 
     return render(
         request,
         'charge/index.html',
         {
-            'orders' : orders
+            'orders' : posts
         }
     )
 
+def complete(request):
+    return render(
+        request,
+        'charge/complete.html',
+    )
+
 def upload_File(request):
-    form = Order()
+    form = Post()
 
     form.user_name = request.POST['user_name']
     form.content = request.POST['content']
@@ -21,10 +28,9 @@ def upload_File(request):
     try:
         form.image = request.FILES['image']
     except:
-        print("씨팔")
         pass
 
     form.save()
 
-    return redirect('/charge/media')
+    return redirect('complete.html')
     

@@ -20,5 +20,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('charge.urls')),
     path('charge/', include('charge.urls')),
 ]
