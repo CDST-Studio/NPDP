@@ -5,5 +5,17 @@
     <title>Blog</title>
 </head>
 <body>
-    <h1>Complete!</h1>
+    <h1>Blog</h1>
+
+
+<form action="{% url 'upload_File' %}" method="POST" enctype="multipart/form-data">
+    내용 <br>
+    <input type="text" name="content"><br/>
+    <input type="file" name="image"><br>
+    {% csrf_token %}
+    <input type="submit" value="Upload"/>
+</form>
+
+
 </body>
+</html> 

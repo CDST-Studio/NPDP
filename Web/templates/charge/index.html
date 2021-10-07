@@ -45,13 +45,14 @@
 
 <form  action="{% url 'upload_File' %}" method="POST" enctype="multipart/form-data">
     <div style="background-image:url('/static/img/img_exe.png'); background-size : cover; height:850px">
-    {% csrf_token %}
     <style>
         input{position: relative; top: 220px;}
     </style>
-     <center><input type="image" src="/static/img/img_upload.png" name="image"/></center>
+     <center><input type="file" src="/static/img/img_upload.png" name="image"/></center>
+     {% csrf_token %}
     </div>
 </form>
+
 
 <footer class="py-5 bg-footer">
     <div class="container">
