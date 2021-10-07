@@ -4,7 +4,7 @@ class Post(models.Model):
     user_name = models.CharField(max_length = 30,blank = True)
     content = models.TextField(blank = True)
 
-    image = models.FileField(upload_to = 'Orders/',blank = True)
+    image = models.ImageField(upload_to = 'Orders/',blank = True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 

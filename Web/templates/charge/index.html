@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 {% load static %}
 <html lang="ko">
@@ -5,41 +6,65 @@
     <meta charset="UTF-8">
     <title>NPDP</title>
 
-    <link rel="stylesheet" href="{% static '/css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}"/>
     <link rel="shortcut icon" href="/static/img/favicon.png" type =  "image/x-icon"/>
     <link rel="icon" href="/static/img/favicon.png"/>
-    <style>
-        body{
-            background-color:bisque;
-        }
-    </style>
 </head>
+
 <body>
-    <nav>
-        <div class="navbar-nav" style="background-color:#4B4B4B">
-          <a class="navbar-brand" href="#">NPDP</a>
-          <a class="navbar-bar">NPDP</a>
-          <a class="nav-link" href="#">로그인</a>
-          <a class="navbar-bar">ㅣ</a>
-          <a class="nav-link" href="#">회원결제</a>
-          <a class="navbar-bar">ㅣ</a>
-          <a class="float-right nav-link" href="#">마이페이지</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <style>
+        nav{background-image:url('/static/img/img_top.png'); background-size :cover; height: 100px;}
+        </style>
+        <div class="container px-4 px-lg-5">
+            <img src="/static/img/img_logo.png" width="250", height="80">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="me-auto">
+                </ul>
+                <form class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active h5" aria-current="page" href="#!"><b style="color: #36002E;">로그인</b></a></li>
+                        <li class="nav-item"><a class="nav-link h5" href="#!"><b  style="color: #36002E;">회원결제</b></a></li>
+                        <li class="nav-item dropdown h5">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b style="color: #36002E;">마이페이지</b></a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
         </div>
     </nav>
 
-    <h1>화이팅</h1>
-    <div padding:100px>화이팅</div>
-<form action="{% url 'upload_File' %}" method="POST" enctype="multipart/form-data">
-    주문자 <br>
-    <input type="text" name="user_name"><br>
-    내용 <br>
-    <input type="text" name="content"><br/>
-    <input type="file" name="image"><br>
+    <div>
+        <img src="/static/img/img_main.png" width="1519" height="550" alt="메인 배너">
+    </div>
+
+    <div>
+        <img src="/static/img/img_mid.png" width="1519" height="550" alt="중간 내용">
+    </div>
+
+<form  action="{% url 'upload_File' %}" method="POST" enctype="multipart/form-data">
+    <div style="background-image:url('/static/img/img_exe.png'); background-size : cover; height:850px">
     {% csrf_token %}
-    <input type="submit" value="Upload"/>
+    <style>
+        input{position: relative; top: 220px;}
+    </style>
+     <center><input type="image" src="/static/img/img_upload.png" name="image"/></center>
+    </div>
 </form>
 
-
-
+<footer class="py-5 bg-footer">
+    <div class="container">
+        <a class="text-footerdark small text-decoration-none" href="#!"><b>공지사항</b></a>
+        <a class="text-footerdark small text-decoration-none" href="#!"><b>고객센터</b></a>
+        <a class="text-footerdark small text-decoration-none" href="#!"><b>이용약관</b></a>
+        <a class="text-footerdark small text-decoration-none" href="#!"><b>개인정보처리방침</b></a>
+        <a class="text-footerdark small text-decoration-none" href="#!"><b>NPDP 소개</b></a>
+    </div>
+    <div class="container">
+        <p class="m-0 text-footerdark small">18323 경기도 화성시 봉담읍 와우안길 17 ㅣ 대표전화 010-5576-9814</p>
+        <p class="m-0 text-footerdark small">Copyright &copy; Number Plate Detective Pang-Ei. All Rights Reserved. 2021</p>
+    </div>
+</footer>
 </body>
 </html>
